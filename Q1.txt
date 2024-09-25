@@ -1,0 +1,67 @@
+//distance converter
+#include <iostream>
+using namespace std;
+
+ class Distance{
+        int feet1,feet2;
+        int inch1,inch2;
+        
+        public:
+        
+        void add()
+        {
+            cout<<"Enter feet1:- ";
+            cin>>feet1;
+            
+            cout<<"Enter inch1:- ";
+            cin>>inch1;
+            
+            cout<<"Enter feet2:- ";
+            cin>>feet2;
+            
+            cout<<"Enter feet1:- ";
+            cin>>inch2;
+        }
+        
+        void read()
+        {
+            cout<<"feet1:- "<<feet1<<endl;
+            cout<<"Inch1:- "<<inch1<<endl;
+            
+            cout<<"feet2:- "<<feet2<<endl;
+            cout<<"Inch2:- "<<inch2<<endl;
+        }
+        
+        void diff()
+        {
+            int tempi1=inch1;
+            int tempi2=inch2;
+            int tempf1=feet1;
+            int tempf2=feet2;
+            while(tempi1>=12)
+            {
+                tempi1-=12;
+                tempf1+=1;
+            }
+            while(tempi2>=12)
+            {
+                tempi2-=12;
+                tempf2+=1;
+            }
+            
+            cout<<tempf1+tempf2<<" feet "<<tempi1+tempi2<<" inch"<<endl;
+        }
+    };
+
+
+int main() {
+    
+   Distance d1;
+   
+   d1.add();
+   d1.read();
+   d1.diff();
+   
+    
+    return 0;
+}
